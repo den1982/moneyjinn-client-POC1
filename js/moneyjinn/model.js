@@ -19,7 +19,7 @@ MONEYJINN.MODEL.user = function(){
 
 
     var storeUserCookie = function() {
-        Cookies.set('userCredentials', 'hallo');
+        Cookies.set('userCredentials', userSettings);
     }
 
     var deleteUserCookie = function() {
@@ -34,7 +34,6 @@ MONEYJINN.MODEL.user = function(){
         userSettings.settingDateFormat = settingDateFormat;
         userSettings.settingDisplayedLanguage = settingDisplayedLanguage;
         userSettings.permissionAdmin = permissionAdmin;
-        userSettings.username = permissionAdmin;
         userSettings.attributeNew = attributeNew;
         userSettings.nextPageToken = nextPageToken;
 

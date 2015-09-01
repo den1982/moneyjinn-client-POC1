@@ -40,9 +40,6 @@ MONEYJINN.login = function () {
 
             userService.storeUserSettings(username, password, userId, settingDateFormat, settingDisplayedLanguage, permissionAdmin, attributeNew, nextPageToken);
             var userSettings = userService.getUserSettings();
-            alert(userSettings);
-
-
 
         } else {
             alert("TODO: Login error handling");
