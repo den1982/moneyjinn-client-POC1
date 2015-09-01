@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Money Jinn</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -101,7 +101,9 @@
 
 <script>
     $(document).ready(function () {
-
+        if (MONEYJINN.login().checkUserLoggedIn()) {
+            window.location.replace("home.html");
+        }
         $('#loginform').validator().on('submit', function (e) {
             //check if submitting is prevented by validator
             if (!e.isDefaultPrevented()) {
@@ -115,9 +117,9 @@
 
 
 </script>
-<div id ="response"><div>
+<div id ="response">
 
-
+</div>
 </body>
 
 </html>
