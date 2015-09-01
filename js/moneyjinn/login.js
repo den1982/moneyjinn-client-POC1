@@ -27,7 +27,6 @@ MONEYJINN.login = function () {
     }
 
     var handleLoginResponseCallback = function (response) {
-        $('#response').text("Response von Request:  " + JSON.stringify(response));
 
         if (response.getUserSettingsForStartupResponse != undefined) {
 
@@ -46,7 +45,9 @@ MONEYJINN.login = function () {
 
 
         } else {
-            alert("TODO: Login error handling");
+            if (response.error != undefined)
+            $('#error_message').text(response.error.message);
+            $('#error_message').show();
         }
     }
 
